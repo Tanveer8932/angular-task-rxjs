@@ -1,0 +1,15 @@
+<!-- list-view.component.html -->
+<div *ngIf="employees.length > 0; else noData">
+    <ul>
+      <li *ngFor="let employee of employees">
+        <h3>{{ employee.userId }}</h3>
+        <p>ID: {{ employee.id }}</p>
+        <p>Title: {{ employee.title }}</p>
+        <p>Description: {{ employee.body }}</p>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noData>
+    <p>No employees available.</p>
+  </ng-template>
+  
